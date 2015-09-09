@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6473eb25a7808b54486bbdf1e09c9f58
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - mouseOverSound: {instanceID: 0}
+  - clickSound: {instanceID: 0}
+  - normalMaterial: {fileID: 2100000, guid: cfcb5c47845d4c142a16a3003850d004, type: 2}
+  - hoverMaterial: {fileID: 2100000, guid: 2f4487697a0b6fb47b297327eae9e1a6, type: 2}
+  - BtnCube: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

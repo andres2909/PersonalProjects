@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 28868eaf5bdcf37449ea85d408a093dd
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - normalMat: {fileID: 2100000, guid: a689541850f7430469240ee947a081f6, type: 2}
+  - hoverMat: {fileID: 2100000, guid: 6774cccd3da160c49bafb4a61d511e43, type: 2}
+  - background1: {instanceID: 0}
+  - background2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

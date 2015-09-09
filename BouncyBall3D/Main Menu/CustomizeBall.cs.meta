@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 47bd6e3b4ca1d284da45876050e33559
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Ball: {instanceID: 0}
+  - Skin: {instanceID: 0}
+  - GUIskin: {fileID: 11400000, guid: 2d410bd826fd3f642b899fced48ba229, type: 2}
+  - LargePreview: {fileID: 2800000, guid: 0f908771e3bd4854186ecff7af442ffe, type: 3}
+  - OwnedTexture: {fileID: 2800000, guid: 9280517130f5452448a6a1b524ecce08, type: 3}
+  - coinTexture: {fileID: 2800000, guid: 4baeebe794e7bd6469a43ed03acc82f7, type: 3}
+  - buyButtonEffect: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

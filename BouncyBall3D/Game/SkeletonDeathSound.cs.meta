@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: cdc85510f3d533b4880cc2114298615e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - deathSound: {instanceID: 0}
+  - addScore: {fileID: 10200000, guid: 065bf4437f6021c4c8707259a05ba57b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
