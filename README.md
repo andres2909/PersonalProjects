@@ -1,5 +1,5 @@
-# UnityProjectScripts
-Scripts used on unity games
+# Personal Projects
+Code used on personal projects
 
 # Links to games:
 
