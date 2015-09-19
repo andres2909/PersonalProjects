@@ -19,7 +19,7 @@ public class Paddle : MonoBehaviour
     private float range = 11.5f;                // Range of the paddle
     private float speed = 50f;                  // Speed of the paddle
     private bool laserReady = true;             // Is laser ready to use?
-    private float laserCooldownImgWidth;        // Width of the Cooldown bar image
+    //private float laserCooldownImgWidth;        // Width of the Cooldown bar image
 
     private AudioSource laserSound;
     private GameObject laser;
@@ -56,7 +56,7 @@ public class Paddle : MonoBehaviour
         }
 
         // Accelerometer movement
-        transform.Translate(Input.acceleration.x, 0, 0);
+        transform.Translate(Input.acceleration.x * Time.deltaTime * speed, 0, 0);
 
         // Get the paddle's position to a vector variable    
         Vector3 currentPosition = transform.position;
@@ -64,33 +64,6 @@ public class Paddle : MonoBehaviour
         currentPosition.x = Mathf.Clamp(currentPosition.x, -range, range);
         // Set the transform position to our modified vector
         transform.position = currentPosition;
-
-        // When user clicks/taps the screen
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-        {
-            // Check if ball is moving
-            if (GameManager.gameOn)
-            {
-                // Check if laser is ready
-                if (laserReady)
-                {
-                    //Instantiate the laser playing the sound effect
-                    laser = Instantiate(laserPrefab, transform.position + new Vector3(0, 0, 2), Quaternion.Euler(90, 0, 0)) as GameObject;
-                    laser.tag = "Laser";
-                    laserSound.Play();
-
-                    //Cooldown
-                    laserReady = false;
-                    laserCooldownImg.rectTransform.sizeDelta = new Vector2(0, 32);
-                    StartCoroutine(LaserCooldown());
-                }
-            }
-            // If the ball is not moving, start moving it
-            else
-            {
-                GameManager.gameOn = true;
-            }
-        }
 
         // Increment the width of the Cooldown bar image
         if (laserCooldownImg.rectTransform.sizeDelta.x < 230)
@@ -104,6 +77,35 @@ public class Paddle : MonoBehaviour
     #endregion
 
     #region Other Functions
+
+    /// <summary>
+    /// Shoots the laser
+    /// </summary>
+    public void ShootLaser()
+    {
+        // Check if ball is moving
+        if (GameManager.gameOn)
+        {
+            // Check if laser is ready
+            if (laserReady)
+            {
+                //Instantiate the laser playing the sound effect
+                laser = Instantiate(laserPrefab, transform.position + new Vector3(0, 0, 2), Quaternion.Euler(90, 0, 0)) as GameObject;
+                laser.tag = "Laser";
+                laserSound.Play();
+
+                //Cooldown
+                laserReady = false;
+                laserCooldownImg.rectTransform.sizeDelta = new Vector2(0, 32);
+                StartCoroutine(LaserCooldown());
+            }
+        }
+        // If the ball is not moving, start moving it
+        else
+        {
+            GameManager.gameOn = true;
+        }
+    }
 
     /// <summary>
     /// Makes the Laser available

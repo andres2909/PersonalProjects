@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     // Private variables                          
     private float range = 7.0f;                             // Movement range of the camera
     private Vector3 velocityCamSmooth = Vector3.zero;       // Smoothing of the camera
-    private float camSmoothDampTime = 0.3f;                 // Damping of the camera
+    private float camSmoothDampTime = 0.2f;                 // Damping of the camera
     private Transform player;                               // Storess the transform of the player each frame
 
     #endregion

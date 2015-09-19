@@ -22,9 +22,9 @@ public class HSManager : MonoBehaviour
     // Private Variables
     private bool save = false;              // Makes sure code to save game executes only once
     private bool newHighScore = false;      // True if there's a score to save
-    private bool saveOnline = false;        // True if score has to be saved online
+    //private bool saveOnline = false;        // True if score has to be saved online
     private bool saveLocally = false;       // True if score has to be saved offline
-    private bool onlineHSLoaded = false;    // Checks if online score has been loaded
+    //private bool onlineHSLoaded = false;    // Checks if online score has been loaded
     private string localNameKey;            // Name of the name key in PlayerPrefs
     private string localScoreKey;           // Name of the score key in PlayerPrefs
     private string playerName;              // Name inputed by the user in the Input box
@@ -39,7 +39,7 @@ public class HSManager : MonoBehaviour
     void Start()
     {
         saveLocally = false;
-        saveOnline = false;
+        //saveOnline = false;
     }
 
     /// <summary>
@@ -61,17 +61,17 @@ public class HSManager : MonoBehaviour
         // Spin the loading icon.
         loadingIcon.transform.Rotate(new Vector3(0, 0, -7));
 
-        // Show world high score message and hide the loading icon
-        if (onlineHSLoaded && saveOnline)
-        {
-            loadingIcon.color = Color.clear;
-            worldHS.SetActive(true);
-        }
-        // Hide the loading icon
-        else if (onlineHSLoaded && !saveOnline)
-        {
-            loadingIcon.color = Color.clear;
-        }
+        //// Show world high score message and hide the loading icon
+        //if (onlineHSLoaded && saveOnline)
+        //{
+        //    loadingIcon.color = Color.clear;
+        //    worldHS.SetActive(true);
+        //}
+        //// Hide the loading icon
+        //else if (onlineHSLoaded && !saveOnline)
+        //{
+        //    loadingIcon.color = Color.clear;
+        //}
     }
 
     #endregion
@@ -104,7 +104,7 @@ public class HSManager : MonoBehaviour
             }
         }
 
-        // World High Scores query
+        // //World High Scores query
         //var query = ParseObject.GetQuery("Scores")
         //        .OrderByDescending("Score")
         //        .Limit(10);
@@ -129,6 +129,9 @@ public class HSManager : MonoBehaviour
         //            }
         //        }
         //        onlineHSLoaded = true;
+        //    }
+        //    else
+        //    {
         //    }
         //});
 
@@ -192,17 +195,17 @@ public class HSManager : MonoBehaviour
     /// <summary>
     /// Saves the High Score Online
     /// </summary>
-    //void SaveOnline()
-    //{
-    //    if (saveOnline)
-    //    {
-    //        ParseObject storeScore = new ParseObject("Scores");
-    //        storeScore["Name"] = playerName;
-    //        storeScore["Score"] = GameManager.score;
-    //        storeScore.SaveAsync();
-    //        saveOnline = false;
-    //    }
-    //}
+    void SaveOnline()
+    {
+        //if (saveOnline)
+        //{
+        //    ParseObject storeScore = new ParseObject("Scores");
+        //    storeScore["Name"] = playerName;
+        //    storeScore["Score"] = GameManager.score;
+        //    storeScore.SaveAsync();
+        //    saveOnline = false;
+        //}
+    }
 
     /// <summary>
     /// Saves the High Score. Called only when "Next" button is pressed.
