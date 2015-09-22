@@ -5,7 +5,7 @@ Code used on personal projects
 
 - BouncyBall 3D: https://www.microsoft.com/en-us/store/apps/bouncy-ball-3d/9wzdncrdqpvg
 - EverMaze: https://www.microsoft.com/en-us/store/apps/evermaze/9nblggh2rb7w
-- Breakout50: Not yet in the store.
+- Breakout50: https://www.microsoft.com/en-us/store/games/breakout50/9nblggh5wt4f
 
 # Other Projects:
 
